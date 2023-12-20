@@ -92,4 +92,5 @@ app.get('/excel', async (_, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+    console.log(uri);
 });
