@@ -4,20 +4,6 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const app = express();
 const port = process.env.BACKEND_PORT || 3001;
-const frontend_port = process.env.FRONTEND_PORT || 3000;
-
-const allowedOrigins = [`http://localhost:${frontend_port}`, 'https://www.aws-online-learning-platform-app.cloudns.eu'];
-
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-  },
-};
-app.use(cors(corsOptions));
 
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
