@@ -24,6 +24,7 @@ const password = process.env.MONGODB_PASSWORD;
 const cluster_name = process.env.MONGODB_CLUSTER;
 
 const uri = `mongodb+srv://${username}:${password}@${cluster_name}/?retryWrites=true&w=majority`;
+console.log(uri);
 
 const client = new MongoClient(uri, {
     serverApi: {
