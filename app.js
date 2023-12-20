@@ -23,7 +23,7 @@ const client = new MongoClient(uri, {
 const database = client.db('course_catalog');
 
 app.get('/', (_, res) => {
-    res.send(`Successfully connected to MongoDB! Connected to: ${uri}`);
+    res.send(`Successfully connected to MongoDB!`);
 });
 
 app.get('/python', async (_, res) => {
