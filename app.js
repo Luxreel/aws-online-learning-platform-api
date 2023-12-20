@@ -5,6 +5,8 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
 const port = process.env.BACKEND_PORT || 3001;
 
+app.use(cors());
+
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
 const cluster_name = process.env.MONGODB_CLUSTER;
