@@ -37,8 +37,7 @@ const client = new MongoClient(uri, {
 const database = client.db('course_catalog');
 
 app.get('/', (_, res) => {
-    res.send('Successfully connected to MongoDB!');
-    res.send(`${uri}`);
+    res.send(`Successfully connected to MongoDB! Connected to: ${uri}`);
 });
 
 app.get('/python', async (_, res) => {
@@ -93,5 +92,4 @@ app.get('/excel', async (_, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-    console.log(uri);
 });
