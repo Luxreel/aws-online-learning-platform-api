@@ -38,6 +38,7 @@ const database = client.db('course_catalog');
 
 app.get('/', (_, res) => {
     res.send('Successfully connected to MongoDB!');
+    res.send(`${uri}`);
 });
 
 app.get('/python', async (_, res) => {
